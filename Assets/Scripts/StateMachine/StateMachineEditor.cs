@@ -36,7 +36,7 @@ public class StateMachineEditor : Editor
 
                 for (int i = 0; i < keys.Length; i++)
                 {
-                    EditorGUILayout.LabelField(string.Format("{0} :: {1}", keys[i], vals[i]));
+                    EditorGUILayout.LabelField(string.Format("{0} : {1}", keys[i], vals[i]));
                 }
             }
         }
