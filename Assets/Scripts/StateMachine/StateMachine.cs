@@ -4,56 +4,43 @@ using UnityEngine;
 using NaughtyAttributes;
 using System;
 
-public class Test: MonoBehaviour
+namespace Plataformer.StateMachine
 {
-    public enum Test2
+    public class StateMachine<T> where T : System.Enum
     {
-        NONE
-    }
+        public Dictionary<T, StateBase> dictionaryState;
 
-    public void A()
-    {
-        StateMachine<Test2> stateMachine = new StateMachine<Test2>();
+        private StateBase _currentState;
+        public float TimeToStartGame = 1f;
 
-        stateMachine.RegisterStates(Test.Test2.NONE, new StateBase());
-    }
-}
+        public StateBase CurrentState
+        {
+            get { return _currentState; }
+        }
 
+        public void Init()
+        {
+            dictionaryState = new Dictionary<T, StateBase>();
+        }
+        
+        public void RegisterStates(T typeEnum, StateBase state)
+        {
+            dictionaryState.Add(typeEnum, state);
+        }
 
-public class StateMachine<T> where T : System.Enum
-{
-    
-    public Dictionary<T, StateBase> dictionaryState;
+        public void SwitchState(T state)
+        {
+            if (_currentState != null) _currentState.OnStateExit();
 
-    private StateBase _currentState;
-    public float TimeToStartGame = 1f;
+            _currentState = dictionaryState[state];
 
-    public StateBase CurrentState
-    {
-        get { return _currentState; }
-    }
+            _currentState.OnStateEnter();
+        }
 
-    public void Init()
-    {
-        dictionaryState = new Dictionary<T, StateBase>();
-    }
+        public void Update()
+        {
+            if (_currentState != null) _currentState.OnStatestay();
+        }
 
-    public void RegisterStates(T typeEnum, StateBase state) 
-    {
-        dictionaryState.Add(typeEnum, state);
-    }
-
-    public void SwitchState(T state)
-    {
-        if (_currentState != null) _currentState.OnStateExit();
-
-        _currentState = dictionaryState[state];
-
-        _currentState.OnStateEnter();
-    }
-
-    public void Update()
-    {
-        if(_currentState != null) _currentState.OnStatestay();
     }
 }

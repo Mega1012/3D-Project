@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Plataformer.StateMachine;
+using static GameManager;
 
 public class FSMExample : MonoBehaviour
 {

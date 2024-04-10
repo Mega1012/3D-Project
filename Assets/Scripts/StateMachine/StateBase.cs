@@ -2,19 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateBase
+namespace Plataformer.StateMachine
 {
-    public virtual void OnStateEnter(object O = null)
+    public class StateBase
     {
-        Debug.Log("OnStateEnter");
-    }
-    public virtual void OnStatestay()
-    {
-        Debug.Log("OnStatestay");
-    }
-    public virtual void OnStateExit()
-    {
-        Debug.Log("OnStateExit");
+        public virtual void OnStateEnter(object O = null)
+        {
+            Debug.Log("Entrou no Estado");
+        }
+
+        public virtual void OnChangeState()
+        {
+            
+        }
+
+        public virtual void OnStatestay()
+        {
+            Debug.Log("Ficou no estado");
+        }
+        public virtual void OnStateExit()
+        {
+            Debug.Log("Mudou de Estado");
+        }
     }
 }
 
