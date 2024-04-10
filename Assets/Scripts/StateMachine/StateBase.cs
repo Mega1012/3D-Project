@@ -8,7 +8,7 @@ namespace Plataformer.StateMachine
     {
         public virtual void OnStateEnter(object O = null)
         {
-            Debug.Log("Entrou no Estado");
+            
         }
 
         public virtual void OnChangeState()
@@ -18,11 +18,11 @@ namespace Plataformer.StateMachine
 
         public virtual void OnStatestay()
         {
-            Debug.Log("Ficou no estado");
+            
         }
         public virtual void OnStateExit()
         {
-            Debug.Log("Mudou de Estado");
+            
         }
     }
 }

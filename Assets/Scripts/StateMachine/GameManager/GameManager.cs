@@ -32,11 +32,20 @@ public class GameManager : Singleton<GameManager>
         stateMachine.RegisterStates(GameStates.IDLE, new GMStateIdle());
         stateMachine.RegisterStates(GameStates.RUNNING, new GMStateRun());
         stateMachine.RegisterStates(GameStates.JUMPING, new GMStateJump());
-        stateMachine.SwitchState(GameStates.IDLE);
+        
+        stateMachine.SwitchState(GameStates.RUNNING);
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            stateMachine.SwitchState(GameStates.IDLE);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            stateMachine.SwitchState(GameStates.JUMPING);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             stateMachine.SwitchState(GameStates.RUNNING);
         }
