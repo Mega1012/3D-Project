@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float gravity = 9.8f;
     public float jumpSpeed = 15f;
     private float vSpeed = 0f;
+    
 
     [Header("Run Setup")]
     public KeyCode keyRun = KeyCode.LeftShift;
