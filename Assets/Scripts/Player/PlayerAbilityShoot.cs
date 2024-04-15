@@ -38,4 +38,9 @@ public class PlayerAbilityShoot : PlayerAbilityBase
         Debug.Log("Cancel Shoot");
         _currentGun.StopShoot();
     }
+
+    private void Update()
+    {
+        
+    }
 }

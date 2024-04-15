@@ -14,6 +14,8 @@ public class PlayerAbilityBase : MonoBehaviour
         if( player == null ) player = GetComponent<Player>();
     }
 
+
+
     private void Start()
     {
         inputs = new Inputs();
