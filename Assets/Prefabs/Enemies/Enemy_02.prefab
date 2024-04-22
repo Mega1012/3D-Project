@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3458593796918023313}
-  - component: {fileID: 1754924856268423457}
   - component: {fileID: 967284404699590314}
+  - component: {fileID: 7368176699134360583}
   - component: {fileID: 5153583947219165075}
   m_Layer: 0
   m_Name: Enemy_02
@@ -35,27 +35,6 @@ Transform:
   - {fileID: 2573973095586434759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1754924856268423457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4399813668533233076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 065aff8daa1b12040a5082957fea0a90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collider: {fileID: 967284404699590314}
-  flashColor: {fileID: 447093229441340779}
-  particleSystem: {fileID: 4447308429276799084}
-  startLife: 10
-  _currentLife: 0
-  _animationBase: {fileID: 5153583947219165075}
-  startAnimationDuration: 0.2
-  startAnimationEase: 27
-  startWithBornAnimation: 1
 --- !u!65 &967284404699590314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77,6 +56,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.494995, y: 3.5775552, z: 4.497921}
   m_Center: {x: 1.2303162, y: -2.8587778, z: -0.24149132}
+--- !u!114 &7368176699134360583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399813668533233076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fd435fca89d0d46917459215f8fd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 0}
+  flashColor: {fileID: 0}
+  particleSystem: {fileID: 0}
+  startLife: 10
+  _currentLife: 0
+  _animationBase: {fileID: 0}
+  startAnimationDuration: 0.2
+  startAnimationEase: 27
+  startWithBornAnimation: 1
+  waypoints: []
+  minDistance: 1
+  speed: 1
 --- !u!114 &5153583947219165075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5168,17 +5171,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86dc2d7519f0fa047a4a9adbc81a8da7, type: 3}
---- !u!114 &447093229441340779 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7816503047853127950, guid: 86dc2d7519f0fa047a4a9adbc81a8da7, type: 3}
-  m_PrefabInstance: {fileID: 7659964322778344549}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d4fafdaba3f7b4b82b70e63d9d90c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &937771687364233134 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7443898874300591051, guid: 86dc2d7519f0fa047a4a9adbc81a8da7, type: 3}
