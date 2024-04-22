@@ -102,8 +102,18 @@ namespace Enemy
 
         public void Damage(float damage, Vector3 dir)
         {
-            OnDamage(damage);
-            transform.DOMove(transform.position - dir, .1f);
+            //OnDamage(damage);
+            //transform.DOMove(transform.position - dir, .1f);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            Player p = collision.transform.GetComponent<Player>();
+
+            if(p != null)
+            {
+                p.Damage(1);
+            }
         }
     }
 }
