@@ -43,6 +43,7 @@ namespace Boss
             healthBase.OnKill += OnBossKill;
         }
 
+
         private void Init()
         {
             stateMachine = new StateMachine<BossAction>();
