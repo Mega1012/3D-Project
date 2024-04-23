@@ -6,9 +6,9 @@ namespace Plataformer.StateMachine
 {
     public class StateBase
     {
-        public virtual void OnStateEnter(object O = null)
+        public virtual void OnStateEnter(params object[] objs)
         {
-            
+            Debug.Log("On State Enter");
         }
 
         public virtual void OnChangeState()
