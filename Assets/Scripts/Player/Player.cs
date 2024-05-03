@@ -65,7 +65,7 @@ public class Player : MonoBehaviour//, IDamageable
 
     [Header("Life")]
     public HealthBase healthBase;
-    public UiFillUpdater uiGunUpdater;
+    public UiFillUpdater uiFillUpdater;
 
     private bool _alive = true;
 
@@ -104,4 +104,13 @@ public class Player : MonoBehaviour//, IDamageable
         //Damage(damage);
     }
     #endregion
+
+    [NaughtyAttributes.Button]
+    public void Respawn()
+    {
+        if (CheckPointManager.instance.HasCheckPoint())
+        {
+            transform.position = CheckPointManager.instance.GetPositionFromLastCheckPoint();
+        }
+    }
 }
