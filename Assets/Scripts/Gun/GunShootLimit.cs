@@ -72,6 +72,13 @@ public class GunShootLimit : GunBase
     private void GetAllUIs()
     {
         UiFillUpdaters = FindObjectsOfType<UiFillUpdater>().ToList();
+        for(int i = UiFillUpdaters.Count -1; i >= 0; --i)
+        {
+            if (UiFillUpdaters[i].fillUpdaterType != UiFillUpdater.FillUpdaterType.Ammo)
+            {
+                UiFillUpdaters.RemoveAt(i);
+            }
+        }
     }
 }
 

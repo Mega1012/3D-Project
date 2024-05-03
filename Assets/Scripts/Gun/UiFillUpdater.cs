@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Linq;
 
 public class UiFillUpdater : MonoBehaviour
 {
+    public enum FillUpdaterType
+    {
+        Ammo,
+        Health
+    }
+
+    public FillUpdaterType fillUpdaterType = FillUpdaterType.Health;
+    
     public Image uiImage;
 
     [Header("Animation")]
