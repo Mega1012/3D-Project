@@ -44,6 +44,7 @@ public class HealthBase : MonoBehaviour, IDamageable
     public void Damage()
     {
         Damage(5);
+        
     }
 
     public void Damage(float f)
@@ -58,6 +59,7 @@ public class HealthBase : MonoBehaviour, IDamageable
         }
         UpdateUI();
         OnDamage?.Invoke(this);
+        Debug.Log("Aperte E para recuperar vida");
     }
 
     public void Damage(float damage, Vector3 dir)
