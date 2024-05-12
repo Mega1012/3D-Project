@@ -42,7 +42,7 @@ public class ChestItemCoin : ChestItemBase
         {
             i.transform.DOMoveY(2f, tweenEndTime).SetRelative();
             i.transform.DOScale(0, tweenEndTime / 2).SetDelay(tweenEndTime / 2);
-            ItemManager.Instance.AddByType(ItemType.COIN);
+            ItemManager.instance.AddByType(ItemType.COIN);
         }
     }
 }

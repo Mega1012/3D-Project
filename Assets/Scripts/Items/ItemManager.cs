@@ -17,7 +17,7 @@ namespace Itens
     {
         public List<ItemSetup> itemSetups;
 
-        public static ItemManager Instance;
+        
         public SOInt coins;
         public TextMeshProUGUI uiTextCoins;
 
