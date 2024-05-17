@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7565595686197627943}
   - component: {fileID: 239841635640494984}
   - component: {fileID: 9043084574340787902}
-  - component: {fileID: -1084947457806420222}
+  - component: {fileID: 8642156465572000589}
   m_Layer: 0
   m_Name: PFB_Coin_Physics
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &9043084574340787902
 Rigidbody:
@@ -103,7 +103,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &-1084947457806420222
+--- !u!135 &8642156465572000589
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.001
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2290796722903825961
 PrefabInstance:

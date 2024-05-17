@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Plataformer.Core.Singleton;
+using Cloth;
 
 public class Player : Singleton<Player> //, IDamageable
 {
@@ -68,6 +69,9 @@ public class Player : Singleton<Player> //, IDamageable
     public HealthBase healthBase;
     public UiFillUpdater uiFillUpdater;
 
+    [Space]
+    [SerializeField] private ClothChanger _clothChanger;
+
     private bool _alive = true;
 
     private void OnValidate()
@@ -133,5 +137,31 @@ public class Player : Singleton<Player> //, IDamageable
         {
             transform.position = CheckPointManager.instance.GetPositionFromLastCheckPoint();
         }
+    }
+
+    public void ChangeSpeed(float speed, float duration)
+    {
+        StartCoroutine(ChangeSpeedCorroutine(speed, duration));
+    }
+
+    IEnumerator ChangeSpeedCorroutine(float localSpeed, float duration)
+    {
+        var defaultSpeed = speed;
+        speed = localSpeed;
+        yield return new WaitForSeconds(duration);
+        speed = defaultSpeed;
+    }
+
+    public void ChangeTexture(ClothSetup setup, float duration)
+    {
+        StartCoroutine(ChangeTextureCorroutine(setup, duration));
+
+    }
+
+    IEnumerator ChangeTextureCorroutine(ClothSetup setup, float duration)
+    {
+        _clothChanger.ChangeTexture(setup);
+        yield return new WaitForSeconds(duration);
+        _clothChanger.ResetTexture();
     }
 }
