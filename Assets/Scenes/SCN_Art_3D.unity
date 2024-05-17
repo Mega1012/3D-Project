@@ -10476,7 +10476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571599566}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2438513, y: 0.012369559, z: -0.0031104917, w: 0.96972877}
+  m_LocalRotation: {x: 0.2438513, y: 0.012369563, z: -0.0031104928, w: 0.96972877}
   m_LocalPosition: {x: -24.915955, y: 1.6911197, z: -26.88153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10793,6 +10793,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308183431934375681, guid: dee26b3249c351947abd1de425ca3823, type: 3}
       propertyPath: startLife
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308183431934375681, guid: dee26b3249c351947abd1de425ca3823, type: 3}
+      propertyPath: destroyOnKill
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11888,6 +11892,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5531986718136724959, guid: 89e20167823a30d459856414377997d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2108510441}
     - targetCorrespondingSourceObject: {fileID: 8780113881676022535, guid: 89e20167823a30d459856414377997d1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1869414106}
@@ -12871,7 +12878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829191019}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.24385127, y: 0.012369555, z: -0.0031104905, w: 0.96972877}
+  m_LocalRotation: {x: 0.2438513, y: 0.012369563, z: -0.0031104928, w: 0.96972877}
   m_LocalPosition: {x: -24.915955, y: 1.6911197, z: -26.88153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15594,6 +15601,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8043139984699745673, guid: 6a85956ddea0a304da62a369edd2c2fa, type: 3}
   m_PrefabInstance: {fileID: 2105924100}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2108510440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5531986718136724959, guid: 89e20167823a30d459856414377997d1, type: 3}
+  m_PrefabInstance: {fileID: 1755247079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2108510441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f21758bf7ede2f408c9d8fdb1dd8988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 1869414105}
+  texture: {fileID: 2800000, guid: 9b7956da4d2650d478c7194b422b1e34, type: 3}
+  shaderIdName: _EmissionMap
 --- !u!1001 &2111918611
 PrefabInstance:
   m_ObjectHideFlags: 0

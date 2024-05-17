@@ -49,7 +49,7 @@ MonoBehaviour:
   itemType: 0
   compareTag: Player
   particleSystem: {fileID: 0}
-  timeToHide: 3
+  timeToHide: 0
   graphicItem: {fileID: 5280959662345714315}
   collider: {fileID: 3244629346775287444}
   audioSource: {fileID: 0}
