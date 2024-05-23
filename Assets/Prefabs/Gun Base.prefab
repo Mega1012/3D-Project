@@ -100,7 +100,7 @@ MonoBehaviour:
   prefabProjectile: {fileID: 8595346809428771909, guid: bcd3b9039b8cfa44eb25267d2576d5c0, type: 3}
   positionToShoot: {fileID: 7971145133618881194}
   TimeBetweenShoot: 0.3
-  speed: 50
+  speed: 30
   keyCode: 120
 --- !u!1 &764583314960253012
 GameObject:

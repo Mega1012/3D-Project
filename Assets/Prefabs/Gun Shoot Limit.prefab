@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 8595346809428771909, guid: bcd3b9039b8cfa44eb25267d2576d5c0, type: 3}
-  positionToShoot: {fileID: 4814434749570566881}
+  positionToShoot: {fileID: 894180081757702547}
   TimeBetweenShoot: 0.3
-  speed: 50
+  speed: 20
   keyCode: 120
-  UiGunUpdaters: []
+  UiFillUpdaters: []
   maxShoot: 5
   TimeToRecharge: 1
 --- !u!1 &4080837308148849090

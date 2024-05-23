@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class ProjectileBase : MonoBehaviour
 {
-    public float TimeToDestroy = 2f;
-
+    public float TimeToDestroy = 20f;
     public int damageAmount = 1;
     public float speed = 50f;
-
     public List<string> tagsToHit;
 
     private void Awake()
@@ -23,17 +21,27 @@ public class ProjectileBase : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        foreach(var t in tagsToHit)
+        foreach (var t in tagsToHit)
         {
-            if(collision.transform.tag == t)
+            if (collision.transform.CompareTag(t))
             {
                 var damageable = collision.transform.GetComponent<IDamageable>();
-                if (damageable != null) 
-                damageable.Damage(damageAmount);
+                if (damageable != null)
+                {
+                    damageable.Damage(damageAmount);
+                }
 
-            }            
+                if (collision.transform.CompareTag("Enemy"))
+                {
+                    Destroy(gameObject);
+                }
+
+                if (collision.transform.CompareTag("Player"))
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
-        
-        Destroy(gameObject);
     }
 }
+
