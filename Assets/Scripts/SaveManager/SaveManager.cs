@@ -120,5 +120,6 @@ public class SaveSetup
     public int lastLevel;
     public float coins;
     public float health;
+    public float life;
     public string playerName;
 }
