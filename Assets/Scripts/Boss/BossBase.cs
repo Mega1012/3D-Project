@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Plataformer.StateMachine;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using DG.Tweening;
 using System;
-using Enemy;
 
 namespace Boss
 {

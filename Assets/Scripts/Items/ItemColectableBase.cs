@@ -9,11 +9,11 @@ namespace Itens
         public ItemType itemType;
 
         public string compareTag = "Player";
-        public ParticleSystem particleSystem;
+        public new ParticleSystem particleSystem;
         public float timeToHide = 3;
         public GameObject graphicItem;
 
-        public Collider collider;
+        public new Collider collider;
 
         [Header("Sounds")]
         public AudioSource audioSource;

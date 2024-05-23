@@ -5,7 +5,7 @@ using Itens;
 
 public class ItemColectablePlanets : ItemCollectableBase
 {
-    public Collider2D collider;
+    public new Collider2D collider;
     protected override void OnCollect()
     {
         base.OnCollect();

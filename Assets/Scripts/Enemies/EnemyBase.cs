@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Animation;
-
+using UnityEngine.Events;
 
 namespace Enemy
 {
 
     public class EnemyBase : MonoBehaviour, IDamageable
     {
-        public Collider collider;
+        public new Collider collider;
         public FlashColor flashColor;
-        public ParticleSystem particleSystem;
+        public new ParticleSystem particleSystem;
 
         public float startLife = 10f;
         public bool lookAtPlayer = false;
@@ -27,6 +27,9 @@ namespace Enemy
         public float startAnimationDuration = .2f;
         public Ease startAnimationEase = Ease.OutBack;
         public bool startWithBornAnimation = true;
+
+        [Header("Events")]
+        public UnityEvent OnkillEvent;
 
         private Player _player;
 
@@ -60,9 +63,10 @@ namespace Enemy
 
         protected virtual void OnKill()
         {
-            if(collider != null) collider.enabled = false;
+            if (collider != null) collider.enabled = false;
             Destroy(gameObject, 3f);
             PlayAnimationByTrigger(AnimationType.DEATH);
+            OnkillEvent?.Invoke();
         }
 
         public void OnDamage(float f)

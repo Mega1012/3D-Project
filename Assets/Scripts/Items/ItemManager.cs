@@ -11,7 +11,9 @@ namespace Itens
     public enum ItemType
     {
         COIN,
-        LIFE_PACK
+        LIFE_PACK,
+        CHECKPOINT,
+        SKIN
     }
     public class ItemManager : Singleton<ItemManager>
     {
@@ -24,6 +26,13 @@ namespace Itens
         private void Start()
         {
             Reset();
+            LoadItensFromSave();
+        }
+
+        private void LoadItensFromSave()
+        {
+            AddByType(ItemType.COIN, (int) SaveManager.instance.Setup.coins);
+            AddByType(ItemType.LIFE_PACK, (int)SaveManager.instance.Setup.health);
         }
 
         private void Reset()
@@ -66,6 +75,12 @@ namespace Itens
         private void AddLifePack()
         {
             AddByType(ItemType.LIFE_PACK);
+        }
+
+        [NaughtyAttributes.Button]
+        private void AddCheckPoint()
+        {
+            AddByType(ItemType.CHECKPOINT);
         }
 
         [System.Serializable]
