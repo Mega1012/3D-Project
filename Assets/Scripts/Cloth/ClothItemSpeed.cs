@@ -1,3 +1,4 @@
+using Itens;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Cloth
         public override void Collect()
         {
             base.Collect();
+            
             Player.instance.ChangeSpeed(targetSpeed, duration);
         }
     }

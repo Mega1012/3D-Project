@@ -13,7 +13,8 @@ namespace Itens
         COIN,
         LIFE_PACK,
         CHECKPOINT,
-        SKIN
+        SKIN,
+        POWERUP
     }
     public class ItemManager : Singleton<ItemManager>
     {
